@@ -22,6 +22,7 @@ class delaytransaction : public eosio::contract {
             std::make_tuple(id));
         txn.delay_sec = 1;
         //(sender_id, payer, replace_existed)
+		
         txn.send(id, _self);
       }
 
